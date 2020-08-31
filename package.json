@@ -1,0 +1,48 @@
+{
+  "name": "react-stack",
+  "version": "1.0.0",
+  "description": "```\r 1、在一个文件目录下面创建一个文件夹，名字随意（react-stack）\r 2、在这个文件加下启用终端，然后输入命令初始化一下：npm install -y\r 3、全局安装两个插件，分别是webpack和webpack-cli：npm install webpack webpack-cli -g\r 4、再把上面两个插件在项目里面安装一下：npm install webpack webpack-cli -D\r 5、在根目录下创建一个src文件夹然后在里面在创建一个main.js文件，作为webpack的入口文件\r 6、在根目录下在创建一个react.config.js文件然后里面配置：配置代码如下：\r const path = require(\"path\")\r module.exports={\r     //入口文件main.js可以配置好多东西所以非常好用\r     entry:'./src/main.js'\r     //输出文件\r     output:{\r         path:path.resolve(__dirname,'dist')//这个路径作为打包好的文件储存\r         filename:'react.js'//dist文件下的打包文件\r     }\r }\r ```",
+  "main": "react.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack --config react.config.js",
+    "serve": "cross-env NODE_ENV=development cross-env NODE_ENV=development webpack-dev-server --config react.config.js",
+    "start": "npm run serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.2.0",
+    "eslint": "^7.6.0",
+    "eslint-loader": "^4.0.2",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.13.1",
+    "antd": "^4.5.3",
+    "axios": "^0.19.2",
+    "mobx": "^5.15.5",
+    "mobx-react": "^6.2.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
+  }
+}

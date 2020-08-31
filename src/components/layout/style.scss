@@ -1,0 +1,21 @@
+.layout{
+    .lo-Aside{
+        position: absolute;
+        left:0;right:0;top:0;bottom:0;
+        width:200px;
+        line-height:30px;
+        a{ 
+            text-decoration: none;
+            color:black;
+            text-align: center;
+            font-size: 18px;
+            &.on{
+                color:red;
+            }
+        }
+    }
+    .lo-Main{
+        position:absolute;
+        left:200px;right:0;top:0;bottom:0;
+    }
+}
